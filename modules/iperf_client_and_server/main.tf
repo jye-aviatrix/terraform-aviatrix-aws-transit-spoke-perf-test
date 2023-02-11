@@ -153,7 +153,7 @@ apt install -y iperf3
 
 # Start iperf as a server
 while true; do
-    iperf3 -s
+    ${var.server_iperf_command}
 done
 
 EOF
@@ -181,7 +181,7 @@ apt install -y iperf3
 
 # Start iperf as a client
 while true; do
-    iperf3 -c ${aws_network_interface.server.private_ip}
+    iperf3 -c ${aws_network_interface.server.private_ip}${var.client_iperf_additionl_parameters}
 done
 
 EOF
