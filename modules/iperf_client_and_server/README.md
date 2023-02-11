@@ -63,3 +63,11 @@ Accepted connection from 10.0.101.149, port 39710
 [ 33]   3.00-4.00   sec  7.57 MBytes  63.5 Mbits/sec
 ```
 * Notice the client_iperf_additionl_parameters has a leading space, as it will be appened after "iperf 3 -c {server_ip}"
+
+To validate that proper command was running, login to the client/server as ```ubunut```, run ```ps aux | grep iperf3```
+
+Example output
+```bash
+ubuntu@ip-10-0-102-248:~$ ps aux | grep iperf3
+root        1768  6.2  0.3   6044  3212 ?        S    23:28   0:26 iperf3 -s -p 8000 --logfile /home/ubuntu/iperf3.log
+```
