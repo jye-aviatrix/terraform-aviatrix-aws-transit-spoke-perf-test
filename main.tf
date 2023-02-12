@@ -1,8 +1,8 @@
 module "iperf_client_server_az_a" {
   count                             = var.number_of_iperf_client_server_pairs
   source                            = "./modules/iperf_client_and_server"
-  client_name                       = "iperf_client_az_a_${count.index}"
-  server_name                       = "iperf_server_az_a_${count.index}"
+  client_name                       = "iperf_client_${count.index+1}_az_a"
+  server_name                       = "iperf_server_${count.index+1}_az_a"
   client_vpc_id                     = module.client_vpc.vpc_id
   server_vpc_id                     = module.server_vpc.vpc_id
   client_subnet_id                  = module.client_vpc.public_subnets[0]
@@ -16,8 +16,8 @@ module "iperf_client_server_az_a" {
 module "iperf_client_server_az_b" {
   count                             = var.number_of_iperf_client_server_pairs
   source                            = "./modules/iperf_client_and_server"
-  client_name                       = "iperf_client_az_b_${count.index}"
-  server_name                       = "iperf_server_az_b_${count.index}"
+  client_name                       = "iperf_client_${count.index+1}_az_b"
+  server_name                       = "iperf_server_${count.index+1}_az_b"
   client_vpc_id                     = module.client_vpc.vpc_id
   server_vpc_id                     = module.server_vpc.vpc_id
   client_subnet_id                  = module.client_vpc.public_subnets[1]
