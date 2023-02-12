@@ -19,10 +19,6 @@ variable "aviatrix_access_account" {
   description = "Provide Aviatrix Access Account name"
 }
 
-variable "insane_mode" {
-  description = "Enable or disable insane mode / high performance encryption"
-  default     = true
-}
 
 variable "transit_instance_size" {
   description = "Instance size for transit GW, HPE suggest start with c5n.xlarge, non-HPE suggest start with t3.medium"
@@ -64,10 +60,6 @@ variable "client_server_spoke_gw_instance_size" {
   default     = "t3.medium"
 }
 
-variable "client_server_spoke_insane_mode" {
-  description = "Enable or disable insane mode / high performance encryption"
-  default     = true
-}
 
 variable "server_iperf_command" {
   description = "The command running on iperf server"
