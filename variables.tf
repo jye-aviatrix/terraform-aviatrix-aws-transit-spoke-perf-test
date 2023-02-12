@@ -68,3 +68,13 @@ variable "client_server_spoke_insane_mode" {
   description = "Enable or disable insane mode / high performance encryption"
   default     = true
 }
+
+variable "server_iperf_command" {
+  description = "The command running on iperf server"
+  default = "iperf3 -s"
+}
+
+variable "client_iperf_additionl_parameters" {
+  description = "Additional parameters that will append after 'iperf 3 -c <server_ip>', please start with whitespace, eg ' -u' to use UDP, make sure to change server side command to match the switch"
+  default = ""
+}
