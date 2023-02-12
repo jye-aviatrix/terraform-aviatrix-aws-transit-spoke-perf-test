@@ -63,10 +63,10 @@ variable "client_server_spoke_gw_instance_size" {
 
 variable "server_iperf_command" {
   description = "The command running on iperf server"
-  default = "iperf3 -s"
+  default     = "iperf3 -s"
 }
 
 variable "client_iperf_additionl_parameters" {
   description = "Additional parameters that will append after 'iperf 3 -c <server_ip>', please start with whitespace, eg ' -u' to use UDP, make sure to change server side command to match the switch"
-  default = ""
+  default     = ""
 }
